@@ -1,0 +1,76 @@
+.bg-mulligan {
+  background-color: 	#f4eee0!important;
+}
+
+  .navbar-mulligan {
+  background-color: #fffceb !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+
+
+
+
+
+.card-img-top {
+  height: 200px;           /* Controls vertical size */
+  width: 100%;             /* Ensures full card width */
+  object-fit: cover;       /* Crops image to fit without distortion */
+  display: block;          /* Removes bottom spacing */
+}
+
+
+
+
+.card-img-top:hover {
+  transform: scale(1.02);
+}
+
+
+
+.mulligan-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+
+}
+
+
+.intro-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+}
+
+.footer .bi {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .bi-facebook:hover {
+  color: #3b5998; /* Facebook blue */
+}
+
+.footer .bi-twitter:hover {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.footer .bi-instagram:hover {
+  color: #e1306c; /* Instagram pink */
+}
