@@ -6,6 +6,28 @@
   background-color: #c1cfd1 !important;
 }
 
+.navbar-mulligan .navbar-toggler {
+  border-color: rgba(255,255,255,0.5); /* optional border */
+}
+
+.navbar-mulligan .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'
+  xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(212,175,55,1)'
+  stroke-width='2' stroke-linecap='round' stroke-miterlimit='10'  background-size: 1.5em 1.5em; /* ensures it renders */
+  d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  
+}
+
+
+
+.brand-highlight {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #d4af37; /* gold accent */
+  letter-spacing: 2px;
+}
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -28,6 +50,7 @@ main {
   width: 100%;             /* Ensures full card width */
   object-fit: cover;       /* Crops image to fit without distortion */
   display: block;          /* Removes bottom spacing */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
 
@@ -40,10 +63,10 @@ main {
 
 
 .mulligan-brand {
-  font-family: 'Playfair Display', serif;
+   font-family: 'Cinzel', serif;
   font-weight: 700;
-  color: #1a1a1a;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+  color: #222; 
+  letter-spacing: 2px;
 
 }
 
@@ -54,8 +77,10 @@ main {
   font-size: 2rem;
   text-align: center;
   margin-top: 2rem;
-  color: #333;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+  color: #222;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.9),
+             1px 1px 3px rgba(212,175,55,0.6);
+
 }
 
 .footer .bi {
@@ -74,3 +99,5 @@ main {
 .footer .bi-instagram:hover {
   color: #e1306c; /* Instagram pink */
 }
+
+
