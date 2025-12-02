@@ -1,33 +1,39 @@
+/* Backgrounds */
 .bg-mulligan {
-  background-color: 	#526178!important;
+  background-color: #526178 !important;
 }
 
-  .navbar-mulligan {
+/* Navbar */
+.navbar-mulligan {
   background-color: #c1cfd1 !important;
 }
 
 .navbar-mulligan .navbar-toggler {
-  border-color: rgba(255,255,255,0.5); /* optional border */
+  border-color: rgba(255,255,255,0.5);
 }
 
 .navbar-mulligan .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'
-  xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(212,175,55,1)'
-  stroke-width='2' stroke-linecap='round' stroke-miterlimit='10'  background-size: 1.5em 1.5em; /* ensures it renders */
-  d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(212,175,55,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-size: 1.5em 1.5em;
 }
 
+.navbar-mulligan .nav-link {
+  color: #222;
+  transition: color 0.3s ease;
+}
+.navbar-mulligan .nav-link:hover {
+  color: #d4af37; /* gold accent */
+}
 
-
+/* Branding highlight */
 .brand-highlight {
   font-family: 'Cinzel', serif;
   font-weight: 700;
-  color: #d4af37; /* gold accent */
+  color: #d4af37;
   letter-spacing: 2px;
 }
 
-
+/* Layout */
 html, body {
   height: 100%;
   margin: 0;
@@ -39,48 +45,74 @@ main {
   flex: 1;
 }
 
-
-
-
-
-
-
+/* Cards */
 .card-img-top {
-  height: 200px;           /* Controls vertical size */
-  width: 100%;             /* Ensures full card width */
-  object-fit: cover;       /* Crops image to fit without distortion */
-  display: block;          /* Removes bottom spacing */
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
-
-
-
 
 .card-img-top:hover {
   transform: scale(1.02);
 }
 
-
-
-.mulligan-brand {
-   font-family: 'Cinzel', serif;
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.card-title {
+  font-family: 'Cinzel', serif;
   font-weight: 700;
-  color: #222; 
-  letter-spacing: 2px;
-
+  color: #222;
 }
 
+/* Brand text */
+.mulligan-brand {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 2px;
+}
 
+/* Intro heading */
 .intro-heading {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-top: 2rem;
   color: #222;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.9),
-             1px 1px 3px rgba(212,175,55,0.6);
+               1px 1px 3px rgba(212,175,55,0.6);
+}
 
+/* Section headings */
+h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  letter-spacing: 1px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #d4af37; /* gold accent */
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+/* Footer */
+.footer {
+  border-top: 2px solid #d4af37;
 }
 
 .footer .bi {
@@ -88,16 +120,80 @@ main {
   transition: color 0.3s ease;
 }
 
-.footer .bi-facebook:hover {
-  color: #3b5998; /* Facebook blue */
+.footer .bi-facebook:hover { color: #3b5998; }
+.footer .bi-twitter:hover { color: #1da1f2; }
+.footer .bi-instagram:hover { color: #e1306c; }
+
+/* ✅ Luxury gold button style */
+.btn-mulligan {
+  background-color: #d4af37;   /* gold base */
+  color: #222;                 /* dark text for contrast */
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.3s ease;
 }
 
-.footer .bi-twitter:hover {
-  color: #1da1f2; /* Twitter blue */
+.btn-mulligan:hover {
+  background-color: #b9972f;   /* deeper gold on hover */
+  color: #fff;                 /* white text for clarity */
+  transform: translateY(-2px); /* subtle lift */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.footer .bi-instagram:hover {
-  color: #e1306c; /* Instagram pink */
+.btn-mulligan:active {
+  transform: translateY(0);    /* reset lift when pressed */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Dark gradient overlay for carousel */
+.hero-carousel .carousel-item {
+  position: relative;
+}
 
+.hero-carousel .carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    rgba(0,0,0,0.4),   /* top subtle dark */
+    rgba(0,0,0,0.6)    /* bottom stronger dark */
+  );
+  pointer-events: none; /* overlay doesn’t block clicks */
+}
+
+/* Nav links hover */
+.navbar-mulligan .nav-link {
+  color: #222;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.navbar-mulligan .nav-link:hover {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37; /* subtle underline accent */
+}
+
+/* Buttons with gold border */
+.btn-outline-mulligan {
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.btn-outline-mulligan:hover {
+  background-color: #d4af37;
+  color: #222;
+}
+
+/* Card hover accent */
+.card:hover {
+  border: 2px solid #d4af37;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Footer links hover */
+.footer a:hover {
+  color: #d4af37 !important;
+}
